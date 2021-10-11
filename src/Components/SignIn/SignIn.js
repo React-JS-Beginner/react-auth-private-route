@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SignIn = () => {
   return (
-    <Container className="mt-5 pt-5 w-25">
+    <Container className="mt-4 pt-4 w-25">
       <p className="text-secondary fs-1">Sign In</p>
       <Form>
         {/* Email Field */}
@@ -16,7 +16,6 @@ const SignIn = () => {
             placeholder="Enter Email"
           />
         </Form.Group>
-
         {/* Password Field */}
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
@@ -26,24 +25,31 @@ const SignIn = () => {
             placeholder="Password"
           />
         </Form.Group>
-
-        <span>Don't have an account?</span> 
-
-        &nbsp;
-        &nbsp;
-
-        <Link to="/registration">Click here...</Link>
-
+        <span>Don't have an account?</span>
+        &nbsp; &nbsp;
+        <Link to="/registration">Create One</Link>
         {/* Display Error */}
         <p className="text-danger"></p>
-
         {/* Register Button */}
         <Button variant="secondary" type="submit">
           Sign In
         </Button>
       </Form>
+
+      <div className="mt-5">
+        <p className="text-secondary">Or, you can also sign in with</p>
+
+        <Button variant="primary w-25 me-3" size="sm">
+          Facebook
+        </Button>
+        <Button variant="danger w-25 me-3" size="sm">
+          Google
+        </Button>
+        <Button variant="success w-25 me-3" size="sm">
+          Github
+        </Button>
+      </div>
     </Container>
-    
   );
 };
 

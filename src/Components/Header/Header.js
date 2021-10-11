@@ -53,7 +53,7 @@ const Header = () => {
             </Nav>
             <Nav>
               <NavLink to="/user">
-                <img width={24} height={24} src={user} alt="" />
+                <img width={24} height={24} src={user} alt="" rounded />
               </NavLink>
               <NavLink
                 activeClassName="navs-active"
