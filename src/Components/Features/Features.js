@@ -4,10 +4,10 @@ import features from "../images/features.svg";
 
 const Features = () => {
   return (
-    <Container className="mb-5 pb-5">
+    <Container className="w-75 mx-auto mb-5 pb-5">
       <h2 className="text-center mt-5 mb-5">Product Features</h2>
       <Row xs={3} md={3} className="g-4">
-        {Array.from({ length: 6 }).map((_, idx) => (
+        {Array.from({ length: 9 }).map((_, idx) => (
           <Col>
             <Card>
               <Card.Img variant="top" src={features} />
@@ -18,7 +18,7 @@ const Features = () => {
                   lead-in to additional content. This content is a little bit
                   longer.
                 </Card.Text>
-                <Button variant="outline-dark">Order</Button>
+                <Button variant="outline-dark pe-4 ps-4">Order</Button>
               </Card.Body>
             </Card>
           </Col>

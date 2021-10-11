@@ -3,7 +3,7 @@ import { Card, Button, Container } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Container className="mt-5 pt-5">
+    <Container className="w-75 mx-auto mt-5 pt-5">
       <Card className="text-center">
         <Card.Header>Accusantium</Card.Header>
         <Card.Body>
