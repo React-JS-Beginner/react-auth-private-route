@@ -1,8 +1,10 @@
 import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import FirebaseAuth from "../../Hooks/FirebaseAuth";
 
 const SignIn = () => {
+  const {signInWithGoogle} = FirebaseAuth();
   return (
     <Container className="mt-4 pt-4 w-25">
       <p className="text-secondary fs-1">Sign In</p>
@@ -42,7 +44,7 @@ const SignIn = () => {
         <Button variant="primary w-25 me-3" size="sm">
           Facebook
         </Button>
-        <Button variant="danger w-25 me-3" size="sm">
+        <Button onClick={signInWithGoogle} variant="danger w-25 me-3" size="sm">
           Google
         </Button>
         <Button variant="success w-25 me-3" size="sm">

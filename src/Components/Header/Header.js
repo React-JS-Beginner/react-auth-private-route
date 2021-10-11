@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import FirebaseAuth from "../../Hooks/FirebaseAuth";
 import boxlogo from "../images/box.png";
-import user from "../images/user.png";
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = FirebaseAuth();
   return (
     <Container>
       <Navbar
@@ -53,22 +54,45 @@ const Header = () => {
             </Nav>
             <Nav>
               <NavLink to="/user">
-                <img width={24} height={24} src={user} alt="" rounded />
+                {user?.email && (
+                  <img
+                    className="rounded-circle"
+                    width={24}
+                    height={24}
+                    src={user.photoURL}
+                    alt=""
+                  />
+                )}
               </NavLink>
+
               <NavLink
                 activeClassName="navs-active"
                 className="navs ms-3 me-3  text-decoration-none"
                 to="/deets"
               >
-                User
+                {user.displayName}
               </NavLink>
-              <NavLink
-                activeClassName="navs-active"
-                className="navs ms-3 me-3  text-decoration-none"
-                to="/signin"
-              >
-                Sign In
-              </NavLink>
+
+              {!user?.email && (
+                <NavLink
+                  activeClassName="navs-active"
+                  className="navs ms-3 me-3  text-decoration-none"
+                  to="/signin"
+                >
+                  Sign in
+                </NavLink>
+              )}
+
+              {user?.email && (
+                <NavLink
+                  activeClassName="navs-active"
+                  className="navs ms-3 me-3  text-decoration-none"
+                  to="/deets"
+                  onClick={logOut}
+                >
+                  Log out
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
