@@ -65,7 +65,7 @@ const Header = () => {
               <NavLink
                 activeClassName="navs-active"
                 className="navs ms-3 me-3  text-decoration-none"
-                to="/memes"
+                to="/signin"
               >
                 Sign In
               </NavLink>

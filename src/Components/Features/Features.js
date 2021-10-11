@@ -11,14 +11,16 @@ const Features = () => {
           <Col>
             <Card>
               <Card.Img variant="top" src={features} />
-              <Card.Body>
+              <Card.Body className="text-center">
                 <Card.Title>Product Features</Card.Title>
                 <Card.Text>
                   This is a longer card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
                   longer.
                 </Card.Text>
+                <div className="text-center">
                 <Button variant="outline-dark pe-4 ps-4">Order</Button>
+                </div>
               </Card.Body>
             </Card>
           </Col>

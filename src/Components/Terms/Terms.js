@@ -18,7 +18,7 @@ const Terms = () => {
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quo illum suscipit quia deserunt? Veritatis laborum, tempore illo vel, nostrum quas facilis nemo, eveniet temporibus quae atque consequatur doloribus fuga! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quo illum suscipit quia deserunt? Veritatis laborum, tempore illo vel, nostrum quas facilis nemo, eveniet temporibus quae atque consequatur doloribus fuga!</p>
             </div>
             </div>
-            <div className="pt-3">
+            <div className="text-center pt-3">
             <Button variant="secondary pe-5 ps-5" size="sm">Accept</Button> &nbsp; &nbsp; <Button variant="outline-secondary pe-5 ps-5" size="sm">Decline</Button>
             </div>
         </Container>

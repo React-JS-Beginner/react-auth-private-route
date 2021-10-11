@@ -1,9 +1,10 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "./App.css";
 import About from "./Components/About/About";
 import Features from "./Components/Features/Features";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
+import Registration from "./Components/Registration/Registration";
+import SignIn from "./Components/SignIn/SignIn";
 import Terms from "./Components/Terms/Terms";
 
 function App() {
@@ -26,6 +27,12 @@ function App() {
           </Route>
           <Route path="/terms">
             <Terms></Terms>
+          </Route>
+          <Route path="/signin">
+            <SignIn></SignIn>
+          </Route>
+          <Route path="/registration">
+            <Registration></Registration>
           </Route>
         </Switch>
       </BrowserRouter>
