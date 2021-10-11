@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import boxlogo from '../images/box.png';
+import { NavLink } from "react-router-dom";
+import boxlogo from "../images/box.png";
+import user from "../images/user.png";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -14,17 +17,58 @@ const Header = () => {
       >
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Brand className="pe-3 ps-5" href="#logo"><img src={boxlogo} alt="" /></Navbar.Brand>
+          <NavLink className="ms-3 me-3" to="/logo">
+            <img src={boxlogo} alt="" />
+          </NavLink>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#order">Order</Nav.Link>
+              <NavLink
+                activeClassName="navs-active"
+                className="navs ms-3 me-3  text-decoration-none"
+                to="/home"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                activeClassName="navs-active"
+                className="navs ms-3 me-3  text-decoration-none"
+                to="/about"
+              >
+                About
+              </NavLink>
+              <NavLink
+                activeClassName="navs-active"
+                className="navs ms-3 me-3  text-decoration-none"
+                to="/features"
+              >
+                Features
+              </NavLink>
+              <NavLink
+                activeClassName="navs-active"
+                className="navs ms-3 me-3  text-decoration-none"
+                to="/terms"
+              >
+                Terms
+              </NavLink>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link href="#memes">Dank memes</Nav.Link>
+              <NavLink to="/user">
+                <img width={24} height={24} src={user} alt="" />
+              </NavLink>
+              <NavLink
+                activeClassName="navs-active"
+                className="navs ms-3 me-3  text-decoration-none"
+                to="/deets"
+              >
+                User
+              </NavLink>
+              <NavLink
+                activeClassName="navs-active"
+                className="navs ms-3 me-3  text-decoration-none"
+                to="/memes"
+              >
+                Log In
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

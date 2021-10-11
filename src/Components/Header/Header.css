@@ -1,0 +1,11 @@
+.navs {
+  
+    color: rgba(255, 255, 255, 0.644);
+  }
+  .navs:hover
+  {
+    color: white;
+  }
+  .navs-active {
+    color: white;
+  }

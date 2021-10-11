@@ -1,5 +1,8 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
+import slider1 from '../images/slide1.svg'
+import slider2 from '../images/slide2.svg'
+import slider3 from '../images/slide3.svg'
 
 const Home = () => {
   return (
@@ -8,7 +11,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=f5f5f5"
+            src={slider1}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -19,7 +22,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=eee"
+            src={slider2}
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -30,7 +33,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=e5e5e5"
+            src={slider3}
             alt="Third slide"
           />
           <Carousel.Caption>
