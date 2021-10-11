@@ -7,7 +7,7 @@ const About = () => {
       <Card className="text-center">
         <Card.Header>Accusantium</Card.Header>
         <Card.Body>
-          <Card.Title>Lorem, ipsum dolor</Card.Title>
+          <h3>Lorem Ipsum Dolor</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque aut
             officia fugiat, culpa modi quibusdam rerum sit minus fuga expedita

@@ -67,7 +67,7 @@ const Header = () => {
                 className="navs ms-3 me-3  text-decoration-none"
                 to="/memes"
               >
-                Log In
+                Sign In
               </NavLink>
             </Nav>
           </Navbar.Collapse>
