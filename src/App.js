@@ -4,6 +4,7 @@ import Features from "./Components/Features/Features";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Offer from "./Components/Offer/Offer";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Registration from "./Components/Registration/Registration";
 import SignIn from "./Components/SignIn/SignIn";
 import Terms from "./Components/Terms/Terms";
@@ -28,18 +29,22 @@ function App() {
             <Route path="/features">
               <Features></Features>
             </Route>
-            <Route path="/terms">
+
+            <PrivateRoute path="/terms">
               <Terms></Terms>
-            </Route>
+            </PrivateRoute>
+
             <Route path="/signin">
               <SignIn></SignIn>
             </Route>
             <Route path="/registration">
               <Registration></Registration>
             </Route>
-            <Route path="/offer">
+
+            <PrivateRoute path="/offer">
               <Offer></Offer>
-            </Route>
+            </PrivateRoute>
+
           </Switch>
         </BrowserRouter>
       </AuthProvider>
