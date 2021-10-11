@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import FirebaseAuth from "../../Hooks/FirebaseAuth";
+// import FirebaseAuth from "../../Hooks/FirebaseAuth";
+import useAuth from "../../Hooks/useAuth";
 
 const SignIn = () => {
-  const {signInWithGoogle} = FirebaseAuth();
+  // const {signInWithGoogle, error} = FirebaseAuth();
+  const { signInWithGoogle, error } = useAuth();
   return (
     <Container className="mt-4 pt-4 w-25">
       <p className="text-secondary fs-1">Sign In</p>
@@ -31,7 +33,7 @@ const SignIn = () => {
         &nbsp; &nbsp;
         <Link to="/registration">Create One</Link>
         {/* Display Error */}
-        <p className="text-danger"></p>
+        <p className="text-danger">{error}</p>
         {/* Register Button */}
         <Button variant="secondary" type="submit">
           Sign In

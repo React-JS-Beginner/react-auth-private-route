@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import features from "../images/features.svg";
-
+import './Features.css';
 const Features = () => {
   return (
     <Container className="w-75 mx-auto mb-5 pb-5">
@@ -19,7 +20,7 @@ const Features = () => {
                   longer.
                 </Card.Text>
                 <div className="text-center">
-                <Button variant="outline-dark pe-4 ps-4">Order</Button>
+                <Button variant="dark pe-4 ps-4"><Link className="text-decoration-none navs" to="/offer">Order</Link></Button>
                 </div>
               </Card.Body>
             </Card>

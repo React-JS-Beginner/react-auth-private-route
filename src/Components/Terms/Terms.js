@@ -6,7 +6,7 @@ const Terms = () => {
             <h2 className="text-center mb-5">Terms &amp; Conditions</h2>
             <div className="w-75 mx-auto">
             <div className="text-start mb-5">
-            <h4 className="text-secondary" >Lorem Ipsum Dolor</h4>
+            <h4 className="text-secondary" ><u>Lorem Ipsum Dolor</u></h4>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quo illum suscipit quia deserunt? Veritatis laborum, tempore illo vel, nostrum quas facilis nemo, eveniet temporibus quae atque consequatur doloribus fuga! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quo illum suscipit quia deserunt? Veritatis laborum, tempore illo vel, nostrum quas facilis nemo, eveniet temporibus quae atque consequatur doloribus fuga!</p>
             </div>
             <div className="text-start mb-5">

@@ -1,12 +1,14 @@
 import React from "react";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import FirebaseAuth from "../../Hooks/FirebaseAuth";
+// import FirebaseAuth from "../../Hooks/FirebaseAuth";
 import boxlogo from "../images/box.png";
 import "./Header.css";
+import useAuth from "../../Hooks/useAuth";
 
 const Header = () => {
-  const { user, logOut } = FirebaseAuth();
+  // const { user, logOut } = FirebaseAuth();
+  const { user, logOut } = useAuth();
   return (
     <Container>
       <Navbar
