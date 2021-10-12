@@ -3,6 +3,7 @@ import About from "./Components/About/About";
 import Features from "./Components/Features/Features";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
+import NotFound from "./Components/NotFound/NotFound";
 import Offer from "./Components/Offer/Offer";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Registration from "./Components/Registration/Registration";
@@ -49,6 +50,10 @@ function App() {
             <PrivateRoute path="/offer">
               <Offer></Offer>
             </PrivateRoute>
+
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
 
           </Switch>
         </BrowserRouter>
