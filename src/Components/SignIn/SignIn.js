@@ -1,12 +1,25 @@
 import React from "react";
 import { Container, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 // import FirebaseAuth from "../../Hooks/FirebaseAuth";
 import useAuth from "../../Hooks/useAuth";
 
 const SignIn = () => {
   // const {signInWithGoogle, error} = FirebaseAuth();
-  const { signInWithGoogle, error } = useAuth();
+  const { signInWithGoogle } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  // console.log(location.state?.from);
+  const redirect_uri = location.state?.from || "/home";
+
+  const googleLoginHandler = () => {
+    signInWithGoogle()
+    .then((result) => {history.push(redirect_uri);});
+    /* .catch((error) => {
+        setError(error.message);
+      }); */
+  };
+
   return (
     <Container className="mt-4 pt-4 w-25">
       <p className="text-secondary fs-1">Sign In</p>
@@ -33,7 +46,7 @@ const SignIn = () => {
         &nbsp; &nbsp;
         <Link to="/registration">Create One</Link>
         {/* Display Error */}
-        <p className="text-danger">{error}</p>
+        {/* <p className="text-danger">{error}</p> */}
         {/* Register Button */}
         <Button variant="secondary" type="submit">
           Sign In
@@ -46,7 +59,11 @@ const SignIn = () => {
         <Button variant="primary w-25 me-3" size="sm">
           Facebook
         </Button>
-        <Button onClick={signInWithGoogle} variant="danger w-25 me-3" size="sm">
+        <Button
+          onClick={googleLoginHandler}
+          variant="danger w-25 me-3"
+          size="sm"
+        >
           Google
         </Button>
         <Button variant="success w-25 me-3" size="sm">

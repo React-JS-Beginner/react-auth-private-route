@@ -12,11 +12,18 @@ initializeAuthentication();
 
 const FirebaseAuth = () => {
   const [user, setUser] = useState({});
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
+  //After redirect_uri
+  const signInWithGoogle = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  /* 
+  // Before redirect_uri
   const signInWithGoogle = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -26,7 +33,8 @@ const FirebaseAuth = () => {
       .catch((error) => {
         setError(error.message);
       });
-  };
+  }; 
+  */
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -44,7 +52,7 @@ const FirebaseAuth = () => {
 
   return {
     user,
-    error,
+    // error,
     signInWithGoogle,
     logOut,
   };
