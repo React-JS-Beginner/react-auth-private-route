@@ -8,6 +8,7 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Registration from "./Components/Registration/Registration";
 import SignIn from "./Components/SignIn/SignIn";
 import Terms from "./Components/Terms/Terms";
+import User from "./Components/User/User";
 import AuthProvider from "./Context/AuthProvider";
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
             <PrivateRoute path="/terms">
               <Terms></Terms>
             </PrivateRoute>
+
+            <Route path="/user">
+              <User></User>
+            </Route>
 
             <Route path="/signin">
               <SignIn></SignIn>

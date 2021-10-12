@@ -10,7 +10,7 @@ const SignIn = () => {
   const location = useLocation();
   const history = useHistory();
   // console.log(location.state?.from);
-  const redirect_uri = location.state?.from || "/home";
+  const redirect_uri = location.state?.from || "/user";
 
   const googleLoginHandler = () => {
     signInWithGoogle()
@@ -48,7 +48,7 @@ const SignIn = () => {
         {/* Display Error */}
         {/* <p className="text-danger">{error}</p> */}
         {/* Register Button */}
-        <Button variant="secondary" type="submit">
+        <Button className="mt-3" variant="secondary" type="submit">
           Sign In
         </Button>
       </Form>

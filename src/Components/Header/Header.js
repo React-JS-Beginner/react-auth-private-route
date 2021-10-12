@@ -70,7 +70,7 @@ const Header = () => {
               <NavLink
                 activeClassName="navs-active"
                 className="navs ms-3 me-3  text-decoration-none"
-                to="/deets"
+                to="/user"
               >
                 {user.displayName}
               </NavLink>
@@ -89,7 +89,7 @@ const Header = () => {
                 <NavLink
                   activeClassName="navs-active"
                   className="navs ms-3 me-3  text-decoration-none"
-                  to="/deets"
+                  to="/signin"
                   onClick={logOut}
                 >
                   Log out
