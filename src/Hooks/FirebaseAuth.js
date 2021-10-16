@@ -13,12 +13,14 @@ initializeAuthentication();
 const FirebaseAuth = () => {
   const [user, setUser] = useState({});
   // const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
   //After redirect_uri
   const signInWithGoogle = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
@@ -41,18 +43,25 @@ const FirebaseAuth = () => {
       if (user) {
         setUser(user);
       }
+      else{
+        setUser({});
+      }
+      setIsLoading(false);
     });
   }, []);
 
   const logOut = () => {
-    signOut(auth).then(() => {
-      setUser({});
-    });
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .finally(() => setIsLoading(true));
   };
 
   return {
     user,
     // error,
+    isLoading,
     signInWithGoogle,
     logOut,
   };

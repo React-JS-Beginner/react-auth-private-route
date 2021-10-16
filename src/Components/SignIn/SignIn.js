@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Form } from "react-bootstrap";
+import { Container, Button, Form, Spinner } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 // import FirebaseAuth from "../../Hooks/FirebaseAuth";
 import useAuth from "../../Hooks/useAuth";
@@ -7,14 +7,16 @@ import useAuth from "../../Hooks/useAuth";
 const SignIn = () => {
   // const {signInWithGoogle, error} = FirebaseAuth();
   const { signInWithGoogle } = useAuth();
+
   const location = useLocation();
   const history = useHistory();
   // console.log(location.state?.from);
   const redirect_uri = location.state?.from || "/user";
 
   const googleLoginHandler = () => {
-    signInWithGoogle()
-    .then((result) => {history.push(redirect_uri);});
+    signInWithGoogle().then((result) => {
+      history.push(redirect_uri);
+    });
     /* .catch((error) => {
         setError(error.message);
       }); */
@@ -22,7 +24,7 @@ const SignIn = () => {
 
   return (
     <Container className="mt-4 pt-4 w-25">
-      <p className="text-secondary fs-1">Sign In</p>
+      <p className="text-secondary fs-1">Please Sign In</p>
       <Form>
         {/* Email Field */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
