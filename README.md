@@ -1,6 +1,8 @@
 # React Firebase Private Route Authentication Integration
 
-<hr>
-Spinner Problem Solutions
- - https://github.com/davidhu2000/react-spinners/issues/53
- - https://codepen.io/PrimeStudyHub/pen/GVyamQ/
+# Spinner Problem Solutions
+
+<a href="https://github.com/davidhu2000/react-spinners/issues/53">One</a>
+<a href="https://codepen.io/PrimeStudyHub/pen/GVyamQ/">Two</a>
+
+
